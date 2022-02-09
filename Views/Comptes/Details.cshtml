@@ -1,0 +1,54 @@
+﻿@model Bank.Models.Compte
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Compte</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.intitule_compte)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.intitule_compte)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date_ouverture)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date_ouverture)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.solde)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.solde)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numero_compte)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.numero_compte)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.client)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.client.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.type.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Metas -->
+        <meta  name="keywords" content="creative tim, updivision, html dashboard, laravel, livewire, laravel livewire, alpine.js, html css dashboard laravel, soft ui dashboard laravel, livewire soft ui dashboard, soft ui admin, livewire dashboard, livewire admin, web dashboard, bootstrap 4 dashboard laravel, bootstrap 4, css3 dashboard, bootstrap 4 admin laravel, soft ui dashboard bootstrap 4 laravel, frontend, responsive bootstrap 4 dashboard, soft ui dashboard, soft ui laravel bootstrap 4 dashboard" />
+        <meta  name="description" content="Dozens of handcrafted UI components, Laravel authentication, register & profile editing, Livewire & Alpine.js" />
+        <meta  itemprop="name" content="Soft UI Dashboard Laravel by Creative Tim & UPDIVISION" />
+        <meta  itemprop="description" content="Dozens of handcrafted UI components, Laravel authentication, register & profile editing, Livewire & Alpine.js" />
+        <meta  itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/492/original/opt_sd_laravel_thumbnail.jpg" />
+        <meta  name="twitter:card" content="product" />
+        <meta  name="twitter:title" content="Soft UI Dashboard Laravel by Creative Tim & UPDIVISION" />
+        <meta  name="twitter:description" content="Dozens of handcrafted UI components, Laravel authentication, register & profile editing, Livewire & Alpine.js" />
+        <meta  name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/492/original/opt_sd_laravel_thumbnail.jpg" />
+        <meta  property="fb:app_id" content="655968634437471" />
+        <meta  property="og:title" content="Soft UI Dashboard Laravel by Creative Tim & UPDIVISION" />
+        <meta  property="og:type" content="article" />
+        <meta  property="og:url" content="https://www.creative-tim.com/live/vue-argon-dashboard-laravel" />
+        <meta  property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/492/original/opt_sd_laravel_thumbnail.jpg" />
+        <meta  property="og:description" content="Dozens of handcrafted UI components, Laravel authentication, register & profile editing, Livewire & Alpine.js" />
+        <meta  property="og:site_name" content="Creative Tim" />
+        <script>
+            (function(a,s,y,n,c,h,i,d,e){
+                s.className+=' '+y;
+                h.start=1*new Date;
+                h.end=i=function(){
+                    s.className=s.className.replace(RegExp(' ?'+y),'')
+                };
+                (a[n]=a[n]||[]).hide=h;
+                setTimeout(function(){i();h.end=null},c);
+                h.timeout=c;
+            })(window,document.documentElement,'async-hide','dataLayer',4000,
+            {'GTM-K9BGS8K':true});
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){
+                i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+                a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+                m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-46172202-22', 'auto', {allowLinker: true});
+            ga('set', 'anonymizeIp', true);
+            ga('require', 'GTM-K9BGS8K');
+            ga('require', 'displayfeatures');
+            ga('require', 'linker');
+            ga('linker:autoLink', ["2checkout.com","avangate.com"]);
+            </script>
+        <script>
+            (function(w,d,s,l,i)
+                {w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NKDMSK6');
+        </script>
+    <link rel="apple-touch-icon" sizes="76x76" href="~/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="~/img/favicon.png">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>
+        @ViewData["Title"] - Bank
+    </title>
+     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="~/css/nucleo-icons.css" rel="stylesheet" asp-append-version="true"/>
+    <link href="~/css/nucleo-svg.css" rel="stylesheet" asp-append-version="true"/>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="~/css/nucleo-svg.css" rel="stylesheet" asp-append-version="true"/>
+    <!-- CSS Files -->
+    <link id="pagestyle" href="~/css/soft-ui-dashboard.css?v=1" rel="stylesheet" asp-append-version="true"/>
+    <!-- Alpine -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+ 
+
+</head>
+<body>
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-left ms-3"
+    id="sidenav-main">
+    <div class="sidenav-header">
+        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute right-0 top-0 d-none d-xl-none"
+            aria-hidden="true" id="iconSidenav"></i>
+        <a class="navbar-brand m-0" href="#">
+            <img src="~/img/img/logo-ct.png" class="navbar-brand-img h-100" alt="...">
+            <span class="ms-1 font-weight-bold">ISJ Dashboard</span>
+        </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
+        <ul class="navbar-nav">
+            <li class="nav-item mt-2">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Operations</h6>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Virements" asp-action="Index">
+                    <div
+                        class="icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Virements</span>
+                </a>
+            </li>
+            <li class="nav-item pb-2">
+                <a class="nav-link" asp-controller="Versements" asp-action="Index">
+                    
+                    <div
+                        class="icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Versements</span>
+                </a>
+            </li>
+            <li class="nav-item pb-2">
+                <a class="nav-link" asp-controller="Retraits" asp-action="Index">
+                    <div
+                        class="icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Retraits</span>
+                </a>
+            </li>
+            <li class="nav-item pb-2">
+                <a class="nav-link" asp-controller="Comptes" asp-action="Index">
+                    <div
+                        class="icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Comptes</span>
+                </a>
+            </li>
+
+            <li class="nav-item mt-2">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Clients</h6>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Clients" asp-action="Index">
+                    <div
+                        class="icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-circle-08 text-lg opacity-10" aria-hidden="true"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Profile</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Clients" asp-action="Create">
+                    <div
+                        class="icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-fat-add text-lg opacity-10" aria-hidden="true"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Ajouter client</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Clients" asp-action="Delete">
+                    <div
+                        class="icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-fat-delete text-lg opacity-10" aria-hidden="true"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">supprimer client</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+<main class="main-content mt-1 border-radius-lg">
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+        navbar-scroll="true">
+        <div class="container-fluid py-1 px-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                    <li class="breadcrumb-item text-md"><a class="opacity-5 text-dark" href="javascript:;">dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item text-sm text-dark active text-capitalize" aria-current="page"></li>
+                </ol>
+                <h6 class="font-weight-bolder mb-0 text-capitalize"></h6>
+            </nav>
+            <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 d-flex justify-content-end" id="navbar">
+                <div class="ms-md-3 pe-md-3 d-flex align-items-center">
+                    <div class="input-group">
+                        <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" placeholder="Rechercher...">
+                    </div>
+                </div>
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
+                            <livewire:auth.logout />
+                        </a>
+                    </li>
+                    <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item px-3 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0">
+                            <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                        </a>
+                    </li>
+                            <li>
+                                <a class="dropdown-item border-radius-md" href="javascript:;">
+                                    <div class="d-flex py-1">
+                                        <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                                            <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <title>credit-card</title>
+                                                <g id="Basic-Elements" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Rounded-Icons"
+                                                        transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF"
+                                                        fill-rule="nonzero">
+                                                        <g id="Icons-with-opacity"
+                                                            transform="translate(1716.000000, 291.000000)">
+                                                            <g id="credit-card"
+                                                                transform="translate(453.000000, 454.000000)">
+                                                                <path class="color-background"
+                                                                    d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
+                                                                    id="Path" opacity="0.593633743"></path>
+                                                                <path class="color-background"
+                                                                    d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"
+                                                                    id="Shape"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="text-sm font-weight-normal mb-1">
+                                                Transaction effectué avec succès
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0">
+                                                <i class="fa fa-clock me-1"></i>
+                                                2 secondes
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿@model Bank.Models.Versement
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Versement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="motif" class="control-label"></label>
+                <input asp-for="motif" class="form-control" />
+                <span asp-validation-for="motif" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date_versement" class="control-label"></label>
+                <input asp-for="date_versement" class="form-control" />
+                <span asp-validation-for="date_versement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="montant_versement" class="control-label"></label>
+                <input asp-for="montant_versement" class="form-control" />
+                <span asp-validation-for="montant_versement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompteId" class="control-label"></label>
+                <select asp-for="CompteId" class="form-control" asp-items="ViewBag.CompteId"></select>
+                <span asp-validation-for="CompteId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

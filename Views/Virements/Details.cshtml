@@ -1,0 +1,42 @@
+﻿@model Bank.Models.Virement
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Virement</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateVirement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateVirement)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.montant_virement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.montant_virement)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.motif_virement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.motif_virement)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.compte)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.compte.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

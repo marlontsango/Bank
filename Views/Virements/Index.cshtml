@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Bank.Models.Virement>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+            <!-- CSS Files -->
+    <link id="pagestyle" href="~/css/style.css?v=1" rel="stylesheet" asp-append-version="true"/>
+</head>
+
+<div class="row justify-content-center">
+    <a asp-action="Create" class="btn btn-secondary" style="margin-top:100px;">Enregistrer Virement</a>
+</div>
+
+<div class="col-md-12 ml-auto mr-auto" style="margin-top:50px;">
+    <div class="card Application-list">
+        <div class="card-header">
+            <h5>Historiques Virements</h5>
+        </div>
+            <div class="card-block pb-0">
+                <div class="table-responsible">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.DateVirement)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.montant_virement)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.motif_virement)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.compte)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    @foreach (var item in Model) {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DateVirement)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.montant_virement)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.motif_virement)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.compte.Id)
+                                </td>
+                                <td>
+                                    <button class="btn btn-light"><a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |</button>
+                                    <button class="btn btn-info"><a asp-action="Details" asp-route-id="@item.Id">Details</a> |</button>
+                                    <button class="btn btn-danger"> <a asp-action="Delete" asp-route-id="@item.Id">Delete</a></button>
+                                </td>
+                            </tr>
+                    }
+            </tbody>
+        </table>
+</div>
+</div>
+</div>
+</div>
